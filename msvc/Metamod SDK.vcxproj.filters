@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="metamod">
+      <UniqueIdentifier>{01ea3f40-393d-442f-9997-456ba27cbb1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="metamod\include">
+      <UniqueIdentifier>{11e49280-e6cd-4a0d-b541-a8c34105a703}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="metamod\src">
+      <UniqueIdentifier>{aa18e376-adcc-46a0-a9ac-8ed5012ef2a5}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\metamod\include\metamod\api.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\engine.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\engine_hooks.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\gamedll.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\gamedll_hooks.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\os_dep.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\plugin_info.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\utils.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\metamod_config.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\metamod\src\engine.cpp">
+      <Filter>metamod\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\metamod\src\engine_hooks.cpp">
+      <Filter>metamod\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\metamod\src\gamedll.cpp">
+      <Filter>metamod\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\metamod\src\gamedll_hooks.cpp">
+      <Filter>metamod\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\metamod\src\h_export.cpp">
+      <Filter>metamod\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\metamod\src\utils.cpp">
+      <Filter>metamod\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\metamod\src\metamod_api.cpp">
+      <Filter>metamod\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="metamodsdk_mm.def">
+      <Filter>metamod</Filter>
+    </None>
+  </ItemGroup>
+</Project>
