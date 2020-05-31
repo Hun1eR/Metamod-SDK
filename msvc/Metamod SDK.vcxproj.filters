@@ -52,9 +52,6 @@
     <ClCompile Include="..\metamod\src\engine_hooks.cpp">
       <Filter>metamod\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\metamod\src\gamedll.cpp">
-      <Filter>metamod\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\metamod\src\gamedll_hooks.cpp">
       <Filter>metamod\src</Filter>
     </ClCompile>
