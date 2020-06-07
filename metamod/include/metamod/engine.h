@@ -1305,7 +1305,7 @@ public:
 	/// </remarks>
 	static Strind alloc_string(const char* value)
 	{
-		return engine_funcs_->alloc_string(value);
+		return Strind(engine_funcs_->alloc_string(value));
 	}
 
 	/// <summary>

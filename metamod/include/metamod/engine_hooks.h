@@ -622,7 +622,7 @@ public:
 	/// <summary>
 	/// <para>Allocates a string in the string pool.</para>
 	/// </summary>
-	static void alloc_string(const std::add_pointer_t<Strind(const char* value)> callback, const bool post = false)
+	static void alloc_string(const std::add_pointer_t<unsigned int(const char* value)> callback, const bool post = false)
 	{
 		set_hook(&EngineFuncPointers::alloc_string, callback, post);
 	}
