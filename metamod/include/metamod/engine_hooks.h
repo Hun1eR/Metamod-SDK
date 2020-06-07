@@ -614,7 +614,7 @@ public:
 	/// <summary>
 	/// <para>Gets the string assigned to the index.</para>
 	/// </summary>
-	static void sz_from_index(const std::add_pointer_t<const char*(Strind string)> callback, const bool post = false)
+	static void sz_from_index(const std::add_pointer_t<const char*(unsigned int string)> callback, const bool post = false)
 	{
 		set_hook(&EngineFuncPointers::sz_from_index, callback, post);
 	}

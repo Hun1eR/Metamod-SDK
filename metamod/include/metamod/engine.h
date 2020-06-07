@@ -1282,7 +1282,7 @@ public:
 	/// <remarks>
 	///		If the index is invalid, returns a pointer to invalid memory.<br/>
 	/// </remarks>
-	static const char* sz_from_index(const Strind string)
+	static const char* sz_from_index(const unsigned int string)
 	{
 		return engine_funcs_->sz_from_index(string);
 	}
