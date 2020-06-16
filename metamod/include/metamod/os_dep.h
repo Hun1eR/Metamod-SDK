@@ -21,6 +21,8 @@
 
 #if defined _WIN32
 #define DLLEXPORT __declspec(dllexport)  // NOLINT(cppcoreguidelines-macro-usage)
+#elif defined __clang__
+#define DLLEXPORT __attribute__ ((visibility ("default")))
 #else
 #define DLLEXPORT __attribute__ ((visibility ("default"), externally_visible))
 #endif

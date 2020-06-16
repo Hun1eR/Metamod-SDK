@@ -4,6 +4,9 @@
 #
 # Compile with Intel C++ Compiler:
 #   rm -rf build && CC=icc CXX=icpc cmake -B build && cmake --build build --parallel
+#
+# Compile with Clang:
+#   rm -rf build && CC=clang CXX=clang++ cmake -B build && cmake --build build --parallel
 #-------------------------------------------------------------------------------------------
 
 
@@ -16,6 +19,16 @@ cmake_minimum_required(VERSION 3.13.5 FATAL_ERROR)
 
 # Set the name of the project.
 project("metamodsdk")
+
+# Enable Clang-Tidy checks.
+set(CLANG_TIDY -checks=-*,boost-*,bugprone-*,clang-analyzer-*,cppcoreguidelines-*,misc-*,modernize-*,mpi-*,openmp-*,performance-*,portability-*,readability-*,)
+
+# Disable Clang-Tidy checks.
+set(CLANG_TIDY_SUPPRESS -cppcoreguidelines-avoid-c-arrays*,-cppcoreguidelines-avoid-magic-numbers*,-cppcoreguidelines-pro-type-reinterpret-cast*,-cppcoreguidelines-pro-bounds-pointer-arithmetic*,-cppcoreguidelines-pro-type-vararg*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay*,-cppcoreguidelines-pro-bounds-constant-array-index*,-cppcoreguidelines-owning-memory*,-modernize-avoid-c-arrays*,-modernize-use-trailing-return-type*,-readability-implicit-bool-conversion*,-readability-magic-numbers*,-readability-named-parameter*)
+
+# Specify a semicolon-separated list containing a command line for the clang-tidy tool.
+set(CMAKE_C_CLANG_TIDY clang-tidy ${CLANG_TIDY}${CLANG_TIDY_SUPPRESS})
+set(CMAKE_CXX_CLANG_TIDY ${CMAKE_C_CLANG_TIDY})
 
 # Add a library target to be built from the source files.
 add_library(${CMAKE_PROJECT_NAME} SHARED)
@@ -104,4 +117,6 @@ if (${CMAKE_CXX_COMPILER_ID} MATCHES "GNU")
     include(cmake/GCC.cmake)
 elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Intel")
     include(cmake/Intel.cmake)
+elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
+    include(cmake/Clang.cmake)
 endif()
