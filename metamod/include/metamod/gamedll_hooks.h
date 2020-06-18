@@ -61,11 +61,13 @@ public:
 	/// </summary>
 	static void clear_all_hooks()
 	{
-		if (dll_hooks_ != nullptr)
+		if (dll_hooks_ != nullptr) {
 			std::memset(static_cast<void*>(dll_hooks_), 0, sizeof(DllFuncPointers));
+		}
 
-		if (dll_post_hooks_ != nullptr)
+		if (dll_post_hooks_ != nullptr) {
 			std::memset(static_cast<void*>(dll_post_hooks_), 0, sizeof(DllFuncPointers));
+		}
 	}
 
 	/// <summary>
@@ -537,11 +539,13 @@ public:
 	/// </summary>
 	static void clear_all_hooks()
 	{
-		if (dll_new_hooks_ != nullptr)
+		if (dll_new_hooks_ != nullptr) {
 			std::memset(static_cast<void*>(dll_new_hooks_), 0, sizeof(DllNewFuncPointers));
+		}
 
-		if (dll_new_post_hooks_ != nullptr)
+		if (dll_new_post_hooks_ != nullptr) {
 			std::memset(static_cast<void*>(dll_new_post_hooks_), 0, sizeof(DllNewFuncPointers));
+		}
 	}
 
 	/// <summary>

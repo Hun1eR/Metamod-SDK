@@ -51,11 +51,13 @@ public:
 	/// </summary>
 	static void clear_all_hooks()
 	{
-		if (engine_hooks_ != nullptr)
+		if (engine_hooks_ != nullptr) {
 			std::memset(static_cast<void*>(engine_hooks_), 0, sizeof(EngineFuncPointers));
+		}
 
-		if (engine_post_hooks_ != nullptr)
+		if (engine_post_hooks_ != nullptr) {
 			std::memset(static_cast<void*>(engine_post_hooks_), 0, sizeof(EngineFuncPointers));
+		}
 	}
 
 	/// <summary>
