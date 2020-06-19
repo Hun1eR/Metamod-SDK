@@ -20,23 +20,11 @@ cmake_minimum_required(VERSION 3.13.5 FATAL_ERROR)
 # Set the name of the project.
 project("metamodsdk")
 
-# Enable Clang-Tidy checks.
-set(CLANG_TIDY -checks=-*,boost-*,bugprone-*,clang-analyzer-*,cppcoreguidelines-*,misc-*,modernize-*,mpi-*,openmp-*,performance-*,portability-*,readability-*,)
-
-# Disable Clang-Tidy checks.
-set(CLANG_TIDY_SUPPRESS -cppcoreguidelines-avoid-c-arrays*,-cppcoreguidelines-avoid-magic-numbers*,-cppcoreguidelines-pro-type-reinterpret-cast*,-cppcoreguidelines-pro-bounds-pointer-arithmetic*,-cppcoreguidelines-pro-type-vararg*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay*,-cppcoreguidelines-pro-bounds-constant-array-index*,-cppcoreguidelines-owning-memory*,-modernize-avoid-c-arrays*,-modernize-use-trailing-return-type*,-readability-implicit-bool-conversion*,-readability-magic-numbers*,-readability-named-parameter*)
-
-# Specify a semicolon-separated list containing a command line for the clang-tidy tool.
-set(CMAKE_C_CLANG_TIDY clang-tidy ${CLANG_TIDY}${CLANG_TIDY_SUPPRESS})
-set(CMAKE_CXX_CLANG_TIDY ${CMAKE_C_CLANG_TIDY})
-
-# Add a library target to be built from the source files.
-add_library(${CMAKE_PROJECT_NAME} SHARED)
-
 # Options
 option(OPT_DEBUG "Build with debugging information and runtime checks." ON)
 option(OPT_NO_RTTI "Disable RTTI support." ON)
 option(OPT_NO_EXCEPTIONS "Disable exception handling table generation." ON)
+option(OPT_RUN_CLANG_TIDY "Run clang-tidy checks." ON)
 
 # Linking options
 option(OPT_LINK_C "Linking with libc library." ON)
@@ -45,7 +33,17 @@ option(OPT_LINK_DL "Linking with libdl library." ON)
 option(OPT_LINK_LIBGCC "Static linking with libgcc library." ON)
 option(OPT_LINK_LIBSTDC "Static linking with libstdc++ library." ON)
 
+# Set the search path for CMake modules to be loaded by the include()
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+
+include(Tools)
+include(ClangTidy)
+
+# Add a library target to be built from the source files.
+add_library(${CMAKE_PROJECT_NAME} SHARED)
+
 # Set policies
+cmake_policy(SET CMP0017 NEW)
 cmake_policy(SET CMP0018 NEW)
 cmake_policy(SET CMP0063 NEW)
 cmake_policy(SET CMP0065 NEW)
@@ -57,7 +55,6 @@ cmake_policy(SET CMP0092 NEW)
 set(CMAKE_RULE_MESSAGES ON)
 set(CMAKE_VERBOSE_MAKEFILE OFF)
 
-include(cmake/Tools.cmake)
 set_build_type()
 set_output_binary_name()
 set_default_parallel_jobs()
@@ -86,7 +83,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${sources_list})
 # Set definitions.
 #-------------------------------------------------------------------------------------------
 
-include(cmake/Definitions.cmake)
+include(Definitions)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     REHLDS_FIXES
     REGAMEDLL_FIXES
@@ -114,9 +111,9 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 )
 
 if (${CMAKE_CXX_COMPILER_ID} MATCHES "GNU")
-    include(cmake/GCC.cmake)
+    include(GCC)
 elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Intel")
-    include(cmake/Intel.cmake)
+    include(Intel)
 elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
-    include(cmake/Clang.cmake)
+    include(Clang)
 endif()
