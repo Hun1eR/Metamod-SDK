@@ -151,7 +151,7 @@
     <ClCompile Include="..\metamod\src\engine.cpp" />
     <ClCompile Include="..\metamod\src\engine_hooks.cpp" />
     <ClCompile Include="..\metamod\src\gamedll_hooks.cpp" />
-    <ClCompile Include="..\metamod\src\h_export.cpp" />
+    <ClCompile Include="..\metamod\src\export.cpp" />
     <ClCompile Include="..\metamod\src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
