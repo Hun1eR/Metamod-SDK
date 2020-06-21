@@ -58,10 +58,10 @@
     <ClCompile Include="..\metamod\src\h_export.cpp">
       <Filter>metamod\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\metamod\src\metamod_api.cpp">
+    <ClCompile Include="..\metamod\src\utils.cpp">
       <Filter>metamod\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\metamod\src\utils.cpp">
+    <ClCompile Include="..\metamod\src\api.cpp">
       <Filter>metamod\src</Filter>
     </ClCompile>
   </ItemGroup>
