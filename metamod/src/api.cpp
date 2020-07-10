@@ -10,7 +10,6 @@
 #include <metamod/engine_hooks.h>
 #include <metamod/gamedll.h>
 #include <metamod/gamedll_hooks.h>
-#include <metamod/os_dep.h>
 #include <metamod/utils.h>
 #include <cstring>
 #include <type_traits>
