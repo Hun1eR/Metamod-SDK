@@ -11,13 +11,13 @@ set(CMAKE_CXX_COMPILE_OPTIONS_IPO ${CMAKE_CXX_COMPILE_OPTIONS_IPO} -fno-fat-lto-
 #-------------------------------------------------------------------------------------------
 
 # Diagnostic flags
-option(ALL_DIAGNOSTIC_GROUPS "Enable all diagnostic groups." OFF)
+option(ALL_DIAGNOSTIC_GROUPS "Enable all diagnostic groups." ON)
 
 # TODO: Add diagnostic flags for COMPILE_LANGUAGE:C
 target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:
     -w3 -Wall -Wremarks -Wcheck -Weffc++
     -Wuninitialized -Wdeprecated -Wpointer-arith
-    -diag-disable=383,1418,1419,1572,2012,2015
+    -diag-disable=383,1418,1419,1572,1710,1711,1712,2012,2015,2133,13000
 
     # Build type Release, MinSizeRel, RelWithDebInfo
     $<$<OR:$<CONFIG:Release>,$<CONFIG:MinSizeRel>,$<CONFIG:RelWithDebInfo>>:
