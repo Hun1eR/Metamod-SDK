@@ -167,7 +167,7 @@ extern "C" MetamodStatus DLLEXPORT Meta_Attach(MetaPluginLoadTime /*load_time*/,
 	g_meta_globals = globals;
 	g_dll_funcs = dll_funcs_tables->dll_functions_table;
 	g_dll_new_funcs = dll_funcs_tables->dllnew_functions_table;
-	std::memcpy(export_funcs_table, &hook_export_funcs, sizeof(MetaHookExportFuncs));
+	std::memcpy(export_funcs_table, &hook_export_funcs, sizeof(MetaHookExportFuncs)); // cppcheck-suppress memsetClass
 
 #ifdef META_ATTACH
 	if (META_ATTACH() != MetamodStatus::Ok) {
