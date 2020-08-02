@@ -10,9 +10,6 @@
 
 #include <cssdk/engine/eiface.h>
 
-extern DllFuncPointers* g_dll_funcs;
-extern DllNewFuncPointers* g_dll_new_funcs;
-
 /// <summary>
 /// Class GameDll.
 /// </summary>

@@ -9,7 +9,7 @@
 #pragma once
 
 #include <metamod/metamod_config.h>
-#include <metamod/os_dep.h>
+#include <metamod/os_defs.h>
 
 /// <summary>
 /// <para>Metamod interface version.</para>

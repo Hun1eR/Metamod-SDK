@@ -9,7 +9,7 @@
 #pragma once
 
 #include <cssdk/engine/eiface.h>
-#include <metamod/os_dep.h>
+#include <metamod/os_defs.h>
 #include <metamod/plugin_info.h>
 #include <cstdarg>
 #include <utility>

@@ -17,7 +17,6 @@
 
 #undef DLLEXPORT
 #undef NOINLINE
-#undef FASTCALL
 #undef FORCEINLINE_STATIC
 
 #ifdef _WIN32
@@ -32,12 +31,6 @@
 #define NOINLINE __declspec(noinline)  // NOLINT(cppcoreguidelines-macro-usage)
 #else
 #define NOINLINE __attribute__((noinline))  // NOLINT(cppcoreguidelines-macro-usage)
-#endif
-
-#ifdef _WIN32
-#define FASTCALL __fastcall  // NOLINT(cppcoreguidelines-macro-usage)
-#else
-#define FASTCALL  // NOLINT(cppcoreguidelines-macro-usage)
 #endif
 
 #ifdef _WIN32

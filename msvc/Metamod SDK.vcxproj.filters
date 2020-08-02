@@ -32,9 +32,6 @@
     <ClInclude Include="..\metamod\include\metamod\gamedll_hooks.h">
       <Filter>metamod\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\metamod\include\metamod\os_dep.h">
-      <Filter>metamod\include</Filter>
-    </ClInclude>
     <ClInclude Include="..\metamod\include\metamod\plugin_info.h">
       <Filter>metamod\include</Filter>
     </ClInclude>
@@ -45,6 +42,9 @@
       <Filter>metamod\include</Filter>
     </ClInclude>
     <ClInclude Include="..\metamod\include\metamod\metamod.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\os_defs.h">
       <Filter>metamod\include</Filter>
     </ClInclude>
   </ItemGroup>
