@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\metamod\include\metamod\api.h" />
+    <ClInclude Include="..\metamod\include\metamod\metamod.h" />
     <ClInclude Include="..\metamod\include\metamod\metamod_config.h" />
     <ClInclude Include="..\metamod\include\metamod\engine.h" />
     <ClInclude Include="..\metamod\include\metamod\engine_hooks.h" />

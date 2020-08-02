@@ -44,6 +44,9 @@
     <ClInclude Include="..\metamod\include\metamod\metamod_config.h">
       <Filter>metamod\include</Filter>
     </ClInclude>
+    <ClInclude Include="..\metamod\include\metamod\metamod.h">
+      <Filter>metamod\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\metamod\src\engine.cpp">
