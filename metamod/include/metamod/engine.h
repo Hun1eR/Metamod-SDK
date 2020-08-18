@@ -1089,6 +1089,34 @@ public:
 	}
 
 	/// <summary>
+	/// <para>Writes a coordinates (x, y, z).<br/></para>
+	/// </summary>
+	///
+	/// <remarks>
+	///		If no message had been started, triggers a sys error.<br/>
+	/// </remarks>
+	static void write_coord(const Vector& value)
+	{
+		engine_funcs_->write_coord(value.x);
+		engine_funcs_->write_coord(value.y);
+		engine_funcs_->write_coord(value.z);
+	}
+
+	/// <summary>
+	/// <para>Writes a coordinates (x, y, z).<br/></para>
+	/// </summary>
+	///
+	/// <remarks>
+	///		If no message had been started, triggers a sys error.<br/>
+	/// </remarks>
+	static void write_coord(const vec_t* const value)
+	{
+		engine_funcs_->write_coord(value[0]);
+		engine_funcs_->write_coord(value[1]);
+		engine_funcs_->write_coord(value[2]);
+	}
+
+	/// <summary>
 	/// <para>Writes a single null terminated string.<br/></para>
 	/// </summary>
 	///
