@@ -145,7 +145,6 @@
     <ClInclude Include="..\metamod\include\metamod\engine_hooks.h" />
     <ClInclude Include="..\metamod\include\metamod\gamedll.h" />
     <ClInclude Include="..\metamod\include\metamod\gamedll_hooks.h" />
-    <ClInclude Include="..\metamod\include\metamod\os_defs.h" />
     <ClInclude Include="..\metamod\include\metamod\plugin_info.h" />
     <ClInclude Include="..\metamod\include\metamod\utils.h" />
   </ItemGroup>

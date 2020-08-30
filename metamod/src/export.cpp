@@ -7,8 +7,8 @@
 // ***********************************************************************
 
 #include <cssdk/engine/eiface.h>
+#include <cssdk/public/os_defs.h>
 #include <metamod/engine.h>
-#include <metamod/os_defs.h>
 #include <cstring>
 
 /// <summary>

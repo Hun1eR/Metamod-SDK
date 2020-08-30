@@ -8,8 +8,8 @@
 
 #pragma once
 
+#include <cssdk/public/os_defs.h>
 #include <metamod/metamod_config.h>
-#include <metamod/os_defs.h>
 
 /// <summary>
 /// <para>Metamod interface version.</para>
