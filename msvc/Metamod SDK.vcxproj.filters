@@ -46,16 +46,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\metamod\src\engine.cpp">
-      <Filter>metamod\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\metamod\src\engine_hooks.cpp">
       <Filter>metamod\src</Filter>
     </ClCompile>
     <ClCompile Include="..\metamod\src\gamedll_hooks.cpp">
-      <Filter>metamod\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\metamod\src\utils.cpp">
       <Filter>metamod\src</Filter>
     </ClCompile>
     <ClCompile Include="..\metamod\src\api.cpp">

@@ -10,16 +10,6 @@
 #include <metamod/engine.h>
 
 /// <summary>
-/// <para>Engine hooks table.</para>
-/// </summary>
-EngineFuncPointers* EngineHooks::engine_hooks_{};
-
-/// <summary>
-/// <para>Engine post hooks table.</para>
-/// </summary>
-EngineFuncPointers* EngineHooks::engine_post_hooks_{};
-
-/// <summary>
 /// <para>Exports the engine hooks.</para>
 /// </summary>
 int export_engine_hooks(EngineFuncPointers* function_table, int* interface_version)

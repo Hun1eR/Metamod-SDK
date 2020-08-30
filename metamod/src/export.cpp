@@ -13,11 +13,11 @@
 
 /// <summary>
 /// </summary>
-EngineFuncPointers g_engine_funcs;
+GlobalVars* g_global_vars{};
 
 /// <summary>
 /// </summary>
-GlobalVars* g_global_vars = nullptr;
+EngineFuncPointers g_engine_funcs{};
 
 /// <summary>
 /// <para>Receive engine function table from engine.<br/>

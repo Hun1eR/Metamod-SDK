@@ -26,7 +26,7 @@ class Engine {
 	/// <summary>
 	/// <para>Engine functions table.</para>
 	/// </summary>
-	static const EngineFuncPointers* engine_funcs_;
+	static inline const EngineFuncPointers* engine_funcs_{};
 
 public:
 	/// <summary>

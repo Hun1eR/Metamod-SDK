@@ -150,11 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\metamod\src\api.cpp" />
-    <ClCompile Include="..\metamod\src\engine.cpp" />
     <ClCompile Include="..\metamod\src\engine_hooks.cpp" />
     <ClCompile Include="..\metamod\src\gamedll_hooks.cpp" />
     <ClCompile Include="..\metamod\src\export.cpp" />
-    <ClCompile Include="..\metamod\src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="metamodsdk_mm.def" />

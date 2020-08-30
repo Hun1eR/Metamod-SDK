@@ -17,17 +17,17 @@
 /// <summary>
 /// <para>The metamod globals.</para>
 /// </summary>
-MetaGlobals* g_meta_globals = nullptr;
+MetaGlobals* g_meta_globals{};
 
 /// <summary>
 /// <para>DLL functions table.</para>
 /// </summary>
-DllFuncPointers* g_dll_funcs = nullptr;
+DllFuncPointers* g_dll_funcs{};
 
 /// <summary>
 /// <para>New DLL functions table.</para>
 /// </summary>
-DllNewFuncPointers* g_dll_new_funcs = nullptr;
+DllNewFuncPointers* g_dll_new_funcs{};
 
 /// <summary>
 /// <para>Table of get api functions, retrieved from each plugin.</para>
