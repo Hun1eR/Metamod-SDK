@@ -20,7 +20,7 @@ extern "C" void DLLEXPORT WINAPI GiveFnptrsToDll(const EngineFuncPointers*, Glob
 /// <summary>
 /// Class Engine.
 /// </summary>
-class Engine {
+class Engine { //-V553
 	friend void WINAPI GiveFnptrsToDll(const EngineFuncPointers*, GlobalVars*);
 
 	/// <summary>

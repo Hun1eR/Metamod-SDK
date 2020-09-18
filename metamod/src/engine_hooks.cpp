@@ -9,6 +9,8 @@
 #include <metamod/engine_hooks.h>
 #include <metamod/engine.h>
 
+//-V::601
+
 /// <summary>
 /// <para>Exports the engine hooks.</para>
 /// </summary>

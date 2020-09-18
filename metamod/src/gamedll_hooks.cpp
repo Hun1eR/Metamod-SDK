@@ -9,6 +9,8 @@
 #include <metamod/gamedll_hooks.h>
 #include <metamod/engine.h>
 
+//-V::601
+
 /// <summary>
 /// <para>Exports the GameDLL hooks.</para>
 /// </summary>
