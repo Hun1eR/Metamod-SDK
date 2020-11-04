@@ -1373,10 +1373,10 @@ private:
 	static void set_hook(TMember EngineFuncPointers::* member, const TCallback callback, const bool post)
 	{
 		if (post) {
-			engine_hooks_->*member = callback;
+			engine_post_hooks_->*member = callback;
 		}
 		else {
-			engine_post_hooks_->*member = callback;
+			engine_hooks_->*member = callback;
 		}
 	}
 };
